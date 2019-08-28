@@ -22,9 +22,9 @@ def webhook(event, context):
         params["title"] = "Test Notification"
         params["monospace"] = 1
     elif payload.get("insight"):
-        params["timestamp"] = datetime.strptime(
-            payload["timestamp"], "%Y-%m-%dT%H:%M:%SZ"
-        ).timestamp()
+        params["timestamp"] = int(
+            datetime.strptime(payload["timestamp"], "%Y-%m-%dT%H:%M:%SZ").timestamp()
+        )
         params["html"] = 1
         params["url_title"] = "View Insight"
         params["url"] = payload["url"]
@@ -45,7 +45,7 @@ def webhook(event, context):
         # TODO - more detail per notification type:
         # if payload.get("insight") == "EscalatedInvocationCount":
         #     message += f"""  more info """
-        params["title"] = re.sub(r'([a-z])([A-Z])', r'\1 \2', payload["insight"])
+        params["title"] = re.sub(r"([a-z])([A-Z])", r"\1 \2", payload["insight"])
     else:
         params["monospace"] = 1
         params["message"] = (json.dumps(payload, indent=2),)
