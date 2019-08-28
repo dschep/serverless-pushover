@@ -1,0 +1,52 @@
+{
+  "insight": "UnusualErrorRate",
+  "id": "9eb1961b-a2b6-401a-89dd-de19481e3885",
+  "description": "During the last hour the function invoice-scheduler-dev-cron had 4 errors which is 129.73% above the median error rate for any 60 minute period over the last 48 hours.",
+  "url": "https://dashboard.serverless-dev.com/tenants/stevewestergaard/applications/accounts-payable/services/invoice-scheduler/stage/dev/region/us-east-1/alert/9eb1961b-a2b6-401a-89dd-de19481e3885",
+  "timestamp": "2019-06-17T20:28:23Z",
+  "target": {
+    "tenant": "stevewestergaard",
+    "application": "accounts-payable",
+    "service": "invoice-scheduler",
+    "function": "invoice-scheduler-dev-cron",
+    "stage": "dev",
+    "region": "us-east-1"
+  },
+  "reference_time_period": {
+    "value": 48,
+    "unit": "hours"
+  },
+  "alert": {
+    "error_rate_60mins": 0.5,
+    "median_error_rate_48hours": 0.21764705882352942,
+    "error_rate_threshold": 0.43529411764705883,
+    "invocation_count_48hours": 725,
+    "invocations_and_errors_60mins": {
+      "datetime": "2019-06-17T20:00:00Z",
+      "invocation_count": 8,
+      "error_count": 4,
+      "errors_by_culprit": {
+        "randomBulk (handler.js)": 4
+      }
+    },
+    "histogram": [
+      {
+        "datetime": "2019-06-17T19:00:00Z",
+        "invocation_count": 13,
+        "error_count": 2,
+        "errors_by_culprit": {
+          "randomBulk (handler.js)": 2
+        }
+      },
+      {
+        "datetime": "2019-06-17T18:00:00Z",
+        "invocation_count": 19,
+        "error_count": 8,
+        "errors_by_culprit": {
+          "randomBulk (handler.js)": 7,
+          "module.exports.cron (handler.js)": 1
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "insight": "UnusualFunctionDuration",
+  "id": "d97a29cf-bcd6-4dfe-8ab6-7338b836e618",
+  "description": "During the last sixty minutes 1 out of 26 invocation durations of the function invoicing-dev-create were 2x greater than the median response time of 718.91ms.",
+  "url": "https://dashboard.serverless-dev.com/tenants/stevewestergaard/applications/accounts-payable/services/invoicing/stage/dev/region/us-west-2/alert/d97a29cf-bcd6-4dfe-8ab6-7338b836e618",
+  "timestamp": "2019-06-14T23:28:20Z",
+  "target": {
+    "tenant": "stevewestergaard",
+    "application": "accounts-payable",
+    "service": "invoicing",
+    "function": "invoicing-dev-create",
+    "stage": "dev",
+    "region": "us-west-2"
+  },
+  "reference_time_period": {
+    "value": 60,
+    "unit": "minutes"
+  },
+  "alert": {
+    "threshold_duration_ms": 1437.817138671875,
+    "median_duration_ms": 718.9085693359375,
+    "maximum_duration_ms": 4815.462890625,
+    "invocation_count_above_threshold": 1,
+    "total_invocation_count": 26,
+    "histogram": [
+      {
+        "timestamp": "2019-06-14T23:25:00Z",
+        "maximum_duration_ms": 720.59385,
+        "invocation_count_above_threshold": 0,
+        "total_invocation_count": 1,
+        "top_invocations": [
+          {
+            "id": "6c912241-d119-4770-a205-085cf249963c",
+            "timestamp": "2019-06-14T23:25:36.533Z",
+            "duration_ms": 720.59385,
+            "type": "transaction",
+            "spans": [
+              {
+                "duration_ms": 34,
+                "start_time": "2019-06-14T23:25:35.814Z",
+                "end_time": "2019-06-14T23:25:35.848Z",
+                "tags": {
+                  "request_hostname": "dynamodb.us-west-2.amazonaws.com",
+                  "aws": {
+                    "service": "dynamodb",
+                    "region": "us-west-2",
+                    "operation": "putItem",
+                    "request_id": "G84N816SVVUA0E6QUJDJLQ3L9BVV4KQNSO5AEMVJF66Q9ASUAAJG",
+                    "error_code": ""
+                  }
+                }
+              },
+              {
+                "duration_ms": 48,
+                "start_time": "2019-06-14T23:25:36.306Z",
+                "end_time": "2019-06-14T23:25:36.354Z",
+                "tags": {
+                  "request_hostname": "sns.us-west-2.amazonaws.com",
+                  "aws": {
+                    "service": "sns",
+                    "region": "us-west-2",
+                    "operation": "publish",
+                    "request_id": "6ab01958-397f-509c-9122-4c26164fcda5",
+                    "error_code": ""
+                  }
+                }
+              },
+              {
+                "duration_ms": 176,
+                "start_time": "2019-06-14T23:25:36.355Z",
+                "end_time": "2019-06-14T23:25:36.531Z",
+                "tags": {
+                  "request_hostname": "email.us-west-2.amazonaws.com",
+                  "aws": {
+                    "service": "email",
+                    "region": "us-west-2",
+                    "operation": "sendEmail",
+                    "request_id": "b6a34735-8efb-11e9-a365-9d6a134c22e2",
+                    "error_code": ""
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "deployments": []
+  }
+}

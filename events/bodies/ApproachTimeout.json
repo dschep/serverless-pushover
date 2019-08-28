@@ -1,0 +1,59 @@
+{
+  "insight": "ApproachTimeout",
+  "id": "39ed4a97-02dd-416e-bc6d-cb9b60f930a0",
+  "description": "During the last 60 minutes 25% of the invocations of function alerts-testing-dev-approachingtimeout had a duration greater than 90% of the configured timeout period of undefined seconds.",
+  "url": "https://dashboard.serverless-dev.com/tenants/stevewestergaard/applications/alerts/services/alerts-testing/stage/dev/region/us-east-1/alert/39ed4a97-02dd-416e-bc6d-cb9b60f930a0",
+  "timestamp": "2019-06-12T17:38:23Z",
+  "target": {
+    "tenant": "stevewestergaard",
+    "application": "alerts",
+    "service": "alerts-testing",
+    "function": "alerts-testing-dev-approachingtimeout",
+    "stage": "dev",
+    "region": "us-east-1"
+  },
+  "reference_time_period": {
+    "value": 60,
+    "unit": "minutes"
+  },
+  "alert": {
+    "invocation_count": 8,
+    "timeout_ms": 6000,
+    "approaching_timeout_invocation_count": 2,
+    "timeout_count": 0,
+    "median_duration_ms": 5006.0751953125,
+    "maximum_duration_ms": 5506.651102,
+    "histogram": [
+      {
+        "datetime": "2019-06-12T17:30:00Z",
+        "invocation_count": 2,
+        "approaching_timeout_invocation_count": 2,
+        "timeout_count": 0,
+        "top_invocations": [
+          {
+            "id": "86f7699b-e957-46e5-a6db-2848a2c19558",
+            "timestamp": "2019-06-12T17:33:56.397Z",
+            "duration_ms": 5565.104128,
+            "type": "transaction",
+            "spans": []
+          },
+          {
+            "id": "1bb7a942-8123-4924-bf00-462e8e888de7",
+            "timestamp": "2019-06-12T17:34:06.563Z",
+            "duration_ms": 5506.651102,
+            "type": "transaction",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "deployments": [
+      {
+        "status": "success",
+        "created_at": "2019-06-12T17:37:51.355Z",
+        "username": "steve.westergaard",
+        "deployment_id": "4d0323a1-7c7d-4f2c-8ee7-5f249b5ef27f"
+      }
+    ]
+  }
+}

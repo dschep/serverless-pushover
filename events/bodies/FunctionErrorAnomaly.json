@@ -1,0 +1,24 @@
+{
+  "target": {
+    "tenant": "stevewestergaard",
+    "application": "demo",
+    "service": "api-mongo",
+    "function": "api-mongo-dev-randomShortError",
+    "stage": "dev",
+    "region": "us-east-1"
+  },
+  "insight": "UnusedMemory",
+  "id": "03f60b7a-5bcc-4ef1-8eca-1f5145209051",
+  "url": "https://dashboard.serverless.com/tenants/stevewestergaard/applications/demo/services/api-mongo/stage/dev/region/us-east-1/alert/03f60b7a-5bcc-4ef1-8eca-1f5145209051",
+  "timestamp": "2019-05-24T21:53:20Z",
+  "reference_time_period": {
+    "value": 48,
+    "unit": "hours"
+  },
+  "alert": {
+    "type": "ReferenceError",
+    "message": "Tb96iDoSK is not defined",
+    "culprit": "module.exports.randomShortError (handler.js)",
+    "stack_trace": "[{\\"filename\\":\\"handler.js\\",\\"lineno\\":208,\\"function\\":\\"module.exports.randomShortError\\",\\"library_frame\\":false,\\"abs_path\\":\\"/var/task/handler.js\\",\\"pre_context\\":[\\"  let id = shortid.generate()\\",\\"  var f = new Function(\'name\', `return ${id};`)\\"],\\"context_line\\":\\"  f(\'foo\')\\",\\"post_context\\":[\\"}\\",\\"\\"]},{\\"filename\\":\\"serverless-sdk/index.js\\",\\"lineno\\":1,\\"function\\":\\"<anonymous>\\",\\"library_frame\\":false,\\"abs_path\\":\\"/var/task/serverless-sdk/index.js\\",\\"pre_context\\":[],\\"context_line\\":\\"!function(e,t){if(\\\\\\"object\\\\\\"==typeof exports&&\\\\\\"object\\\\\\"==typeof module)module.exports=t();else if(\\\\\\"func\\",\\"post_context\\":[\\"/**\\",\\" * @license\\"]},{\\"filename\\":\\"/var/runtime/node_modules/awslambda/index.js\\",\\"lineno\\":288,\\"function\\":\\"invoke\\",\\"library_frame\\":true,\\"abs_path\\":\\"/var/runtime/node_modules/awslambda/index.js\\",\\"pre_context\\":[\\"    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then\\",\\"    // https://promisesaplus.com/     \\"],\\"context_line\\":\\"    let response = handler(event, context, callback);\\",\\"post_context\\":[\\"    if (response && response.then !== undefined && typeof response.then === \'function\') {\\",\\"        response.then(context.succeed, context.fail)\\"]},{\\"filename\\":\\"/var/runtime/node_modules/awslambda/index.js\\",\\"lineno\\":151,\\"function\\":\\"start\\",\\"library_frame\\":true,\\"abs_path\\":\\"/var/runtime/node_modules/awslambda/index.js\\",\\"pre_context\\":[\\"\\",\\"        awslambda.reportUserInvokeStart();\\"],\\"context_line\\":\\"        invoke(this._requestHandler, event, baseContext, this.finish.bind(this));\\",\\"post_context\\":[\\"    }\\",\\"\\"]},{\\"filename\\":\\"/var/runtime/node_modules/awslambda/index.js\\",\\"lineno\\":499,\\"function\\":\\"awslambda.waitForInvoke\\",\\"library_frame\\":true,\\"abs_path\\":\\"/var/runtime/node_modules/awslambda/index.js\\",\\"pre_context\\":[\\"\\",\\"awslambda.reportDone(options.invokeid);\\"],\\"context_line\\":\\"awslambda.waitForInvoke((options) => invokeManager.start(options));;\\",\\"post_context\\":[\\"\\"]}]"
+  }
+}

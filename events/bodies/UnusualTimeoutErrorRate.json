@@ -1,0 +1,35 @@
+{
+  "insight": "UnusualTimeoutErrorRate",
+  "id": "3d436c5d-f11b-4816-b606-7c1dfc723fb8",
+  "description": "During the last 60 minutes 3.85% of the invocations of function invoicing-dev-create suffered a timeout error.",
+  "url": "https://dashboard.serverless-dev.com/tenants/stevewestergaard/applications/accounts-payable/services/invoicing/stage/dev/region/us-west-2/alert/3d436c5d-f11b-4816-b606-7c1dfc723fb8",
+  "timestamp": "2019-06-11T05:23:20Z",
+  "target": {
+    "tenant": "stevewestergaard",
+    "application": "accounts-payable",
+    "service": "invoicing",
+    "function": "invoicing-dev-create",
+    "stage": "dev",
+    "region": "us-west-2"
+  },
+  "reference_time_period": {
+    "value": 60,
+    "unit": "minutes"
+  },
+  "alert": {
+    "invocation_count": 26,
+    "error_count": 1,
+    "current_timeout_ms": 6000,
+    "median_duration_ms": 1127.8069458007812,
+    "recent_timed_out_invocations": [
+      {
+        "transaction_id": "2731275d-c939-4214-9d97-c9b5c1efe5b2",
+        "aws_request_id": "fad05251-bb27-49f3-83ac-d9e4978a3af2",
+        "cf_log_group_name": "/aws/lambda/invoicing-dev-create",
+        "cf_log_stream_name": "2019/06/11/[$LATEST]a7d0fd1269d94571a18efaeef91d553a",
+        "duration": 6006.23,
+        "timestamp": "2019-06-11T05:19:34Z"
+      }
+    ]
+  }
+}

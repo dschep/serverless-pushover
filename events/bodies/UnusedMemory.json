@@ -1,0 +1,29 @@
+{
+  "target": {
+    "tenant": "stevewestergaard",
+    "application": "accounts-payable",
+    "service": "invoicing",
+    "function": "invoicing-dev-create",
+    "stage": "dev",
+    "region": "us-east-1"
+  },
+  "insight": "UnusedMemory",
+  "id": "e83d9606-b353-40d3-8960-69a1b85689af",
+  "url": "https://dashboard.serverless.com/tenants/stevewestergaard/applications/accounts-payable/services/invoicing/stage/dev/region/us-east-1/alert/e83d9606-b353-40d3-8960-69a1b85689af",
+  "timestamp": "2019-05-24T21:53:20Z",
+  "reference_time_period": {
+    "value": 7,
+    "unit": "days"
+  },
+  "alert": {
+    "minimum_memory_used_percentage": 1.171875,
+    "maximum_memory_used_percentage": 9.27734375,
+    "average_memory_used_percentage": 2.002292209201389,
+    "invocation_count": 288,
+    "billed_memory_duration_ms": 298400,
+    "provisioned_memory_mb": 1024,
+    "proposed_memory_mb": 128,
+    "current_estimated_weekly_cost": 0.0123,
+    "proposed_estimated_weekly_cost": 0.00001
+  }
+}

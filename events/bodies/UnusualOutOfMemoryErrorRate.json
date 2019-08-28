@@ -1,0 +1,47 @@
+{
+  "insight": "UnusualOutOfMemoryErrorRate",
+  "id": "09ec1544-8bc3-41ad-8df5-a37988e7f2e0",
+  "description": "During the last 60 minutes 50% of the invocations of function api-mongo-dev-getAll suffered an out of memory error because they required more than the 128MB of allocated memory.",
+  "url": "https://dashboard.serverless-dev.com/tenants/stevewestergaard/applications/demo/services/api-mongo/stage/dev/region/us-east-1/alert/09ec1544-8bc3-41ad-8df5-a37988e7f2e0",
+  "timestamp": "2019-06-14T22:23:18Z",
+  "target": {
+    "tenant": "stevewestergaard",
+    "application": "demo",
+    "service": "api-mongo",
+    "function": "api-mongo-dev-getAll",
+    "stage": "dev",
+    "region": "us-east-1"
+  },
+  "reference_time_period": {
+    "value": 60,
+    "unit": "minutes"
+  },
+  "alert": {
+    "invocation_count": 4,
+    "error_count": 2,
+    "current_memory_mb": 128,
+    "proposed_memory_mb": 192,
+    "median_memory_used_percentage": 71.09375,
+    "weekly_billed_duration_ms": 6120300,
+    "current_estimated_weekly_cost": 0.012753975125000002,
+    "proposed_estimated_weekly_cost": 0.0191305626875,
+    "recent_oom_invocations": [
+      {
+        "transaction_id": "a66da216-1dd1-405f-89b6-8c3b8ab892bb",
+        "aws_request_id": "de07c456-76f5-45ca-ad36-5d8f9107fdc0",
+        "cf_log_group_name": "/aws/lambda/api-mongo-dev-getAll",
+        "cf_log_stream_name": "2019/06/14/1bdff75d33ea48809f9af35b840222c9",
+        "duration_ms": 19289.92,
+        "timestamp": "2019-06-14T21:39:13Z"
+      },
+      {
+        "transaction_id": "032e379a-8d2f-41ed-8102-f9d3f2aebc21",
+        "aws_request_id": "71b62bf2-c594-4802-84ad-3c0a4f8bdb9a",
+        "cf_log_group_name": "/aws/lambda/api-mongo-dev-getAll",
+        "cf_log_stream_name": "2019/06/14/1bdff75d33ea48809f9af35b840222c9",
+        "duration_ms": 21820.99,
+        "timestamp": "2019-06-14T21:24:16Z"
+      }
+    ]
+  }
+}
