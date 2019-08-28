@@ -1,4 +1,4 @@
-# Serverless Dashboard Pushover Webhook
+# Serverless Pushover
 
 This is a webhook that forwards webhook requests from
 [Serverless Dashboard](https://dashboard.serverless.com)
@@ -10,8 +10,8 @@ notifications to [Pushover](https://pushover.net).
 ## Setup instructions
 1. Clone this repo & `cd` into it
    ```shell
-   git clone https://github.com/dschep/serverless-dashboard-pushover-webhook
-   cd serverless-dashboard-pushover-webhook
+   git clone https://github.com/dschep/serverless-pushover
+   cd serverless-pushover
    ```
 1. Install the serverless framework
    ```shell
