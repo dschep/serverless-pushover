@@ -48,7 +48,7 @@ def webhook(event, context):
         params["title"] = re.sub(r"([a-z])([A-Z])", r"\1 \2", payload["insight"])
     else:
         params["monospace"] = 1
-        params["message"] = (json.dumps(payload, indent=2),)
+        params["message"] = json.dumps(payload, indent=2)
         params["title"] = "Unknown notification payload"
 
     resp = requests.post("https://api.pushover.net/1/messages.json", json=params)
