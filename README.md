@@ -2,7 +2,7 @@
 
 This is a webhook that forwards webhook requests from
 [Serverless Dashboard](https://dashboard.serverless.com)
-notifications to your phone using [Pushover](https://pushover.net).
+notifications to [Pushover](https://pushover.net).
 
 ![Screenshots of a push notification and detail in Pushover](./screenshots.png)
 
