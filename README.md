@@ -24,4 +24,4 @@ notifications to [Pushover](https://pushover.net).
    PUSHOVER_USER_KEY=<USER> PUSHOVER_APP_KEY=<APP> serverless deploy
    ```
 1. Use the URL for your endpoint from the deploy output in a webhook notification
-   configuration on dashboard.serverless.com
+   configuration on [dashboard.serverless.com](https://dashboard.serverless.com)
