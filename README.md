@@ -17,8 +17,6 @@ notifications to [Pushover](https://pushover.net).
    ```shell
    npm i -g serverless
    ```
-1. Update `org` and `app` in `serveless.yml` to an org and app you can deploy
-   to on dashboard.serverless.com
 1. Create a new application on pushover by clicking [this link](https://pushover.net/apps/build)
 1. Deploy! Replace `<USER>` and `<APP>` with your Pushover user key and the
    key/token for the app you just created respectively.
