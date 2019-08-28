@@ -1,4 +1,4 @@
-# Serverless Pushover
+# ⚡📲 Serverless Pushover
 
 This is a webhook that forwards webhook requests from
 [Serverless Dashboard](https://dashboard.serverless.com)
