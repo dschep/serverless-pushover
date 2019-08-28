@@ -1,6 +1,6 @@
 # ⚡📲 Serverless Pushover
 
-This is a webhook that forwards webhook notifications from
+A Serverless project that forwards webhook notifications from
 [Serverless Dashboard](https://dashboard.serverless.com)
 to [Pushover](https://pushover.net).
 
