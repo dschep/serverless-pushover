@@ -1,16 +1,14 @@
 service: dashboard-pushover-webhook
-app: meta
-org: personal
 
 provider:
   name: aws
   runtime: python3.7
   environment:
-    PUSHOVER_USER_KEY: ${secrets:PUSHOVER_USER_KEY}
-    PUSHOVER_APP_KEY: ${secrets:PUSHOVER_APP_KEY}
+    PUSHOVER_USER_KEY: ${env:PUSHOVER_USER_KEY}
+    PUSHOVER_APP_KEY: ${env:PUSHOVER_APP_KEY}
     PRIORITY: 0
     SOUND: pushover
-    DEVICE: null
+    DEVICE: ''
 
 functions:
   webhook:
