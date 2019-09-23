@@ -1,4 +1,4 @@
-service: dashboard-pushover-webhook
+service: serverless-pushover
 
 provider:
   name: aws
@@ -11,9 +11,47 @@ provider:
     DEVICE: ''
 
 functions:
-  webhook:
-    handler: handler.webhook
+  # Old way: webhook
+  # webhook:
+  #   handler: handler.webhook
+  #   events:
+  #     - http:
+  #         path: /
+  #         method: post
+  sns:
+    handler: handler.sns
     events:
-      - http:
-          path: /
-          method: post
+      - sns:
+          arn:
+            Ref: AlarmTopic
+          topicName: ${self:service}
+
+resources:
+  Resources:
+    AlarmTopic:
+      Type: AWS::SNS::Topic
+      Properties:
+        DisplayName: "Serverless Alerts"
+        TopicName: ${self:service}
+    AlarmTopicPolicy:
+      Type: AWS::SNS::TopicPolicy
+      DependsOn:
+        - AlarmTopic
+      Properties:
+        PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+            - Sid: AllowServerlessFrameworkEnterpriseToPublish
+              Effect: Allow
+              Principal:
+                AWS: "arn:aws:iam::802587217904:root"
+              Action: "sns:Publish"
+              Resource:
+                Ref: AlarmTopic
+        Topics:
+          - Ref: AlarmTopic
+  Outputs:
+    SnsTopicArn:
+      Description: ARN for the SNS Alarm Topic
+      Value:
+        Ref: AlarmTopic

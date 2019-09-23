@@ -1,6 +1,6 @@
 # ⚡📲 Serverless Pushover
 
-A Serverless project that forwards webhook notifications from
+A Serverless project that forwards SNS notifications from
 [Serverless Dashboard](https://dashboard.serverless.com)
 to [Pushover](https://pushover.net).
 
@@ -23,5 +23,5 @@ to [Pushover](https://pushover.net).
    ```shell
    PUSHOVER_USER_KEY=<USER> PUSHOVER_APP_KEY=<APP> serverless deploy
    ```
-1. Use the URL for your endpoint from the deploy output in a webhook notification
+1. Run `sls info -v` and copy the ARN of the SnsTopicArn stack output and paste it into the
    configuration on [dashboard.serverless.com](https://dashboard.serverless.com)
