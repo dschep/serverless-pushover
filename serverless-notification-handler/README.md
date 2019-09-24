@@ -67,8 +67,6 @@ notificationHandler:
     handler: handler.alert
     env:
       FOOBAR: ${env.FOOBAR} # Optional, set any env vars for your code
-mySchedule:
-  component: "@serverless/schedule"
 ```
 
 ### 4. Deploy
