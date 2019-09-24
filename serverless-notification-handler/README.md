@@ -42,7 +42,7 @@ AWS_ACCESS_KEY_ID=XXX
 AWS_SECRET_ACCESS_KEY=XXX
 ```
 
-The `handler.py` file should contain a function to handle a alert notification event from
+The `handler.py` file should contain a function to handle an alert notification event from
 Serverless Insights.
 
 ```python
