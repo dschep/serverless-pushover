@@ -7,16 +7,18 @@ from botocore.vendored import requests
 
 
 def webhook(event, context):
+    """ Legacy API GW handler. """
     print(event["body"])
-    return handle_notification(json.loads(event["body"]), context)
+    return handle_notification(json.loads(event["body"]))
 
 
 def sns(event, context):
+    """ Legacy SNS handler. """
     for record in event["Records"]:
-        handle_notification(json.loads(record["Sns"]["Message"]), context)
+        handle_notification(json.loads(record["Sns"]["Message"]))
 
 
-def handle_notification(event, context):
+def handle_notification(event):
     params = {
         "token": os.environ.get("PUSHOVER_APP_KEY"),
         "user": os.environ.get("PUSHOVER_USER_KEY"),

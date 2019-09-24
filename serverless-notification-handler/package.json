@@ -1,0 +1,26 @@
+{
+  "name": "serverless-notification-handler",
+  "version": "1.0.0",
+  "description": "A Serverless Component to facilitate handling of Serverless Insight Alert Notifications",
+  "main": "serverless.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dschep/serverless-dashboard-pushover-webhook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dschep/serverless-pushover/issues"
+  },
+  "homepage": "https://github.com/dschep/serverless-pushover#readme",
+  "dependencies": {
+    "@serverless/aws-lambda": "^3.0.0",
+    "@serverless/aws-sns-subscription": "^1.1.0",
+    "@serverless/aws-sns-topic": "^1.1.0",
+    "@serverless/core": "^1.0.0"
+  }
+}
