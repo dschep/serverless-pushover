@@ -21,7 +21,7 @@ to [Pushover](https://pushover.net).
 1. Deploy! Replace `<USER>` and `<APP>` with your Pushover user key and the
    key/token for the app you just created respectively.
    ```shell
-   PUSHOVER_USER_KEY=<USER> PUSHOVER_APP_KEY=<APP> serverless deploy
+   PUSHOVER_USER_KEY=<USER> PUSHOVER_APP_KEY=<APP> serverless
    ```
-1. Run `sls info -v` and copy the ARN of the SnsTopicArn stack output and paste it into the
+1. Paste the ARN output in the previous step into the
    configuration on [dashboard.serverless.com](https://dashboard.serverless.com)
